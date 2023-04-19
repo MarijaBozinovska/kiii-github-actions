@@ -5,7 +5,6 @@ on: push
 
 
 jobs: 
-  docker:
      runs-on: ubuntu-latest
      steps:
        -
@@ -25,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: mjovanovik/kii-demo-01:latest
+          tags: MarijaBozinovska/kii-demo-01:latest
       - 
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
